@@ -1,0 +1,160 @@
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+
+import 'j_profile_model.dart';
+export 'j_profile_model.dart';
+
+class JProfileWidget extends StatefulWidget {
+  const JProfileWidget({super.key});
+
+  static String routeName = 'JProfile';
+  static String routePath = '/JProfile';
+
+  @override
+  State<JProfileWidget> createState() => _JProfileWidgetState();
+}
+
+class _JProfileWidgetState extends State<JProfileWidget> {
+  late JProfileModel _model;
+
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    _model = createModel(context, () => JProfileModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+        body: Stack(
+          children: [
+            Stack(
+              children: [
+                Container(
+                  width: double.infinity,
+                  height: MediaQuery.sizeOf(context).height,
+                  child: Stack(
+                    children: [],
+                  ),
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Image.asset(
+                    'assets/images/Profile.png',
+                    width: double.infinity,
+                    height: MediaQuery.sizeOf(context).height * 0.992,
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                Opacity(
+                  opacity: 0,
+                  child: Align(
+                    alignment: AlignmentDirectional(-0.81, -0.8),
+                    child: FFButtonWidget(
+                      onPressed: () async {
+                        context.pushNamed(DHomeWidget.routeName);
+                      },
+                      text: '',
+                      options: FFButtonOptions(
+                        width: 30,
+                        height: 30,
+                        padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
+                        iconPadding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                        color: Color(0xFFEF39CA),
+                        textStyle:
+                            FlutterFlowTheme.of(context).titleSmall.override(
+                                  fontFamily: 'Poppins',
+                                  color: Colors.white,
+                                  letterSpacing: 0.0,
+                                ),
+                        elevation: 0,
+                        borderRadius: BorderRadius.circular(24),
+                      ),
+                    ),
+                  ),
+                ),
+                Opacity(
+                  opacity: 0,
+                  child: Align(
+                    alignment: AlignmentDirectional(0.78, -0.81),
+                    child: FFButtonWidget(
+                      onPressed: () async {
+                        context.pushNamed(JSettingsWidget.routeName);
+                      },
+                      text: '',
+                      options: FFButtonOptions(
+                        width: 45.95,
+                        height: 34.2,
+                        padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
+                        iconPadding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                        color: Color(0xFFEF39CA),
+                        textStyle:
+                            FlutterFlowTheme.of(context).titleSmall.override(
+                                  fontFamily: 'Poppins',
+                                  color: Colors.white,
+                                  letterSpacing: 0.0,
+                                ),
+                        elevation: 0,
+                        borderRadius: BorderRadius.circular(24),
+                      ),
+                    ),
+                  ),
+                ),
+                Opacity(
+                  opacity: 0,
+                  child: Align(
+                    alignment: AlignmentDirectional(0, 0.03),
+                    child: FFButtonWidget(
+                      onPressed: () async {
+                        context.pushNamed(JEditProfileWidget.routeName);
+                      },
+                      text: 'Button',
+                      options: FFButtonOptions(
+                        width: 146.5,
+                        height: 35.1,
+                        padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
+                        iconPadding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                        color: FlutterFlowTheme.of(context).primary,
+                        textStyle:
+                            FlutterFlowTheme.of(context).titleSmall.override(
+                                  fontFamily: 'Poppins',
+                                  color: Colors.white,
+                                  letterSpacing: 0.0,
+                                ),
+                        elevation: 0,
+                        borderRadius: BorderRadius.circular(24),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
