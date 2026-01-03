@@ -1,0 +1,244 @@
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+
+import 'd_home_model.dart';
+export 'd_home_model.dart';
+
+class DHomeWidget extends StatefulWidget {
+  const DHomeWidget({super.key});
+
+  static String routeName = 'DHome';
+  static String routePath = '/DHome';
+
+  @override
+  State<DHomeWidget> createState() => _DHomeWidgetState();
+}
+
+class _DHomeWidgetState extends State<DHomeWidget> {
+  late DHomeModel _model;
+
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    _model = createModel(context, () => DHomeModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+        body: Stack(
+          children: [
+            Container(
+              width: double.infinity,
+              height: MediaQuery.sizeOf(context).height,
+              child: Stack(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: Image.asset(
+                      'assets/images/DASHBOARD.png',
+                      width: double.infinity,
+                      height: MediaQuery.sizeOf(context).height * 0.992,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                  Opacity(
+                    opacity: 0,
+                    child: Align(
+                      alignment: AlignmentDirectional(0.62, 0.56),
+                      child: FFButtonWidget(
+                        onPressed: () async {
+                          context.pushNamed(KRankedWidget.routeName);
+                        },
+                        text: 'Button',
+                        options: FFButtonOptions(
+                          width: 142,
+                          height: 125.9,
+                          padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
+                          iconPadding:
+                              EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                          color: FlutterFlowTheme.of(context).primary,
+                          textStyle:
+                              FlutterFlowTheme.of(context).titleSmall.override(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.white,
+                                    letterSpacing: 0.0,
+                                  ),
+                          elevation: 0,
+                          borderRadius: BorderRadius.circular(24),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Opacity(
+                    opacity: 0,
+                    child: Align(
+                      alignment: AlignmentDirectional(-0.65, 0.17),
+                      child: FFButtonWidget(
+                        onPressed: () async {
+                          context.pushNamed(FRaisedhandsWidget.routeName);
+                        },
+                        text: 'Button',
+                        options: FFButtonOptions(
+                          width: 142,
+                          height: 125.9,
+                          padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
+                          iconPadding:
+                              EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                          color: FlutterFlowTheme.of(context).primary,
+                          textStyle:
+                              FlutterFlowTheme.of(context).titleSmall.override(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.white,
+                                    letterSpacing: 0.0,
+                                  ),
+                          elevation: 0,
+                          borderRadius: BorderRadius.circular(24),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Opacity(
+                    opacity: 0,
+                    child: Align(
+                      alignment: AlignmentDirectional(0.62, 0.16),
+                      child: FFButtonWidget(
+                        onPressed: () async {
+                          context.pushNamed(HScannerWidget.routeName);
+                        },
+                        text: 'Button',
+                        options: FFButtonOptions(
+                          width: 142,
+                          height: 125.9,
+                          padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
+                          iconPadding:
+                              EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                          color: FlutterFlowTheme.of(context).primary,
+                          textStyle:
+                              FlutterFlowTheme.of(context).titleSmall.override(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.white,
+                                    letterSpacing: 0.0,
+                                  ),
+                          elevation: 0,
+                          borderRadius: BorderRadius.circular(24),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Opacity(
+                    opacity: 0,
+                    child: Align(
+                      alignment: AlignmentDirectional(-0.63, 0.56),
+                      child: FFButtonWidget(
+                        onPressed: () async {
+                          context.pushNamed(GBallotformWidget.routeName);
+                        },
+                        text: 'Button',
+                        options: FFButtonOptions(
+                          width: 142,
+                          height: 125.9,
+                          padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
+                          iconPadding:
+                              EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                          color: FlutterFlowTheme.of(context).primary,
+                          textStyle:
+                              FlutterFlowTheme.of(context).titleSmall.override(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.white,
+                                    letterSpacing: 0.0,
+                                  ),
+                          elevation: 0,
+                          borderRadius: BorderRadius.circular(24),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Opacity(
+                    opacity: 0,
+                    child: Align(
+                      alignment: AlignmentDirectional(0.05, 0.87),
+                      child: FFButtonWidget(
+                        onPressed: () async {
+                          context.pushNamed(ECreateRoomWidget.routeName);
+                        },
+                        text: '',
+                        options: FFButtonOptions(
+                          width: 50,
+                          height: 45,
+                          padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
+                          iconPadding:
+                              EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                          color: Color(0xFFEF39CA),
+                          textStyle:
+                              FlutterFlowTheme.of(context).titleSmall.override(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.white,
+                                    letterSpacing: 0.0,
+                                  ),
+                          elevation: 0,
+                          borderRadius: BorderRadius.circular(24),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Opacity(
+                    opacity: 0,
+                    child: Align(
+                      alignment: AlignmentDirectional(0.83, -0.75),
+                      child: FFButtonWidget(
+                        onPressed: () async {
+                          context.pushNamed(JProfileWidget.routeName);
+                        },
+                        text: '',
+                        options: FFButtonOptions(
+                          width: 36.68,
+                          height: 38,
+                          padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
+                          iconPadding:
+                              EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                          color: Color(0xFFEF39CA),
+                          textStyle:
+                              FlutterFlowTheme.of(context).titleSmall.override(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.white,
+                                    letterSpacing: 0.0,
+                                  ),
+                          elevation: 0,
+                          borderRadius: BorderRadius.circular(24),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
