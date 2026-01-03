@@ -1,0 +1,132 @@
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+
+import 'h_scanner_rev_model.dart';
+export 'h_scanner_rev_model.dart';
+
+class HScannerRevWidget extends StatefulWidget {
+  const HScannerRevWidget({super.key});
+
+  static String routeName = 'HScannerRev';
+  static String routePath = '/HScannerRev';
+
+  @override
+  State<HScannerRevWidget> createState() => _HScannerRevWidgetState();
+}
+
+class _HScannerRevWidgetState extends State<HScannerRevWidget> {
+  late HScannerRevModel _model;
+
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    _model = createModel(context, () => HScannerRevModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+        body: Stack(
+          children: [
+            Container(
+              width: double.infinity,
+              height: MediaQuery.sizeOf(context).height,
+              child: Stack(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: Image.asset(
+                      'assets/images/SCAN_BALLOT-_RESULT.png',
+                      width: double.infinity,
+                      height: MediaQuery.sizeOf(context).height * 0.992,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                  Opacity(
+                    opacity: 0,
+                    child: Align(
+                      alignment: AlignmentDirectional(-0.81, -0.8),
+                      child: FFButtonWidget(
+                        onPressed: () async {
+                          context.pushNamed(HScannerWidget.routeName);
+                        },
+                        text: '',
+                        options: FFButtonOptions(
+                          width: 30,
+                          height: 30,
+                          padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
+                          iconPadding:
+                              EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                          color: Color(0xFFEF39CA),
+                          textStyle:
+                              FlutterFlowTheme.of(context).titleSmall.override(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.white,
+                                    letterSpacing: 0.0,
+                                  ),
+                          elevation: 0,
+                          borderRadius: BorderRadius.circular(24),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Opacity(
+                    opacity: 0,
+                    child: Align(
+                      alignment: AlignmentDirectional(0.05, 0.86),
+                      child: FFButtonWidget(
+                        onPressed: () async {
+                          context.pushNamed(DHomeWidget.routeName);
+                        },
+                        text: '',
+                        options: FFButtonOptions(
+                          width: 41.7,
+                          height: 43.2,
+                          padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
+                          iconPadding:
+                              EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                          color: Color(0xFFEF39CA),
+                          textStyle:
+                              FlutterFlowTheme.of(context).titleSmall.override(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.white,
+                                    letterSpacing: 0.0,
+                                  ),
+                          elevation: 0,
+                          borderRadius: BorderRadius.circular(24),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
